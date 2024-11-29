@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+}
+
+a{
+    text-decoration: none;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.3); /* Transparent background */
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect */
+    transition: all 0.3s ease-in-out;
+}
+
+header .container {
+    max-width: 82rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between; /* Ensures left and right alignment */
+    align-items: center;
+    height: 65px;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem; /* Adds consistent spacing between items */
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.logo .images{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.logo img{
+    height: 35px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-right: 0.8rem;
+}
+
+.logo img.logo-forDark{
+    opacity:0;
+}
+
+.logo h2{
+    color: var(--text-color);
+    font-size: 1.55rem;
+    margin-top: 2px;
+}
+
+.logo h2 span{
+    color: var(--main-color);
+}
+
+.nav-link{
+    padding: 0 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: hsl(var(--main-hue),17%,79%);
+    transition: .3s;
+}
+
+.nav-link:hover{
+    color:#fff
+}
+
+.nav-link.theme-toggle{
+    cursor: pointer;
+}
+
+.theme-toggle .fa-moon{
+    display: none;
+}
+
+.theme-toggle .fa-sun{
+    display: inline;
+}
+
+
+/* regestration form */
+
+.container2{
+    max-width: 700px;
+    width: 100%;
+    background:#ffffff;
+    padding: 25px 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.container2 .title{
+    font-size:25px;
+    font-weight: 500;
+    position: relative;
+}
+.container2 .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background:#9b59b6;
+}
+
+.container2 form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0px 12px 0px;
+}
+
+form .user-details .input-box{
+    margin-bottom: 20px;
+    width:calc(100%/2-20px)
+}
+
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #9b59b6;
+}
+
+form .gender-details .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+   
+}
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+
+form input[type="radio"]{
+    display: none;
+}
+
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#71b7e6,#9b59b6);
+}
+
+form .button input:hover{
+    background: linear-gradient(-135deg,#71b7e6,#9b59b6);
+}
+
+@media(max-width:584px){
+    .container2{
+        max-width: 100%;
+    }
+
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .gender-details .category{
+        width: 100%;
+    }
+    .container2 from .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+}
+
+
+
