@@ -1,95 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Contact us</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-	<header>
-        <div class="container">
-            <ul>
-                <li>
-                    <a href="#" class="logo">
-                        <div class="images">
-                            <img src="./img/logo-forDark.png" class="logo-forDark" title="Contact Form">
-                            <img src="./img/logo-forLight.png" class="logo-forLight" title="Contact Form">
-                        </div>
-                        <h2>Contact Form<span>.</span></h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">Join</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link theme-toggle">
-                        <i class="fa-solid fa-sun"></i>
-                        <i class="fa-solid fa-moon"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </header>
+<body class="flex items-center justify-center h-screen bg-gradient-to-br from-blue-400 to-purple-500">
 
-    <div class="container2">
-        <div class="title">Contact Form</div>
-        <form action="#">
-            <div class="user-details">
-                <div class="input-box">
-                    <span class="details">Full Name</span>
-                    <input type="text" placeholder="Enter your name" required>
+    <div class="max-w-lg w-full bg-white p-8 border-2 border-black rounded-md">
+        <div class="text-xl font-medium relative mb-6">
+            Contact Form
+            <div class="absolute bottom-0 left-0 w-8 h-1 bg-purple-500"></div>
+        </div>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="026d2e4d-7e71-4f1f-954d-a80d2162f225">
+            <div class="flex flex-wrap gap-4 mb-6">
+                <!-- Full Name -->
+                <div class="w-full md:w-[calc(50%-0.5rem)]">
+                    <label class="block font-medium mb-1">Full Name</label>
+                    <input name="name" type="text" placeholder="Enter your name" required
+                        class="w-full h-12 px-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
                 </div>
-                <div class="input-box">
-                    <span class="details">Username</span>
-                    <input type="text" placeholder="Enter your username" required>
+                <!-- Username -->
+                <div class="w-full md:w-[calc(50%-0.5rem)]">
+                    <label class="block font-medium mb-1">Username</label>
+                    <input name="username" type="text" placeholder="Enter your username" required
+                        class="w-full h-12 px-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
                 </div>
-                <div class="input-box">
-                    <span class="details">Email</span>
-                    <input type="text" placeholder="Enter your email" required>
+                <!-- Email -->
+                <div class="w-full md:w-[calc(50%-0.5rem)]">
+                    <label class="block font-medium mb-1">Email</label>
+                    <input name="email" type="email" placeholder="Enter your email" required
+                        class="w-full h-12 px-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
                 </div>
-                <div class="input-box">
-                    <span class="details">Phone Number</span>
-                    <input type="text" placeholder="Enter your number" required>
+                <!-- Phone Number -->
+                <div class="w-full md:w-[calc(50%-0.5rem)]">
+                    <label class="block font-medium mb-1">Phone Number</label>
+                    <input name="phonenumber" type="text" placeholder="Enter your number" required
+                        class="w-full h-12 px-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
                 </div>
-                <div class="input-box">
-                    <span class="details">Password</span>
-                    <input type="text" placeholder="Enter your password" required>
+                <!-- Password -->
+                <div class="w-full md:w-[calc(50%-0.5rem)]">
+                    <label class="block font-medium mb-1">Password</label>
+                    <input type="password" placeholder="Enter your password" required
+                        class="w-full h-12 px-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
                 </div>
-                <div class="input-box">
-                    <span class="details">Confirm Password</span>
-                    <input type="text" placeholder="confirm ur password" required>
-                </div>
-            </div>
-            <div class="gender-details">
-                <input type="radio" name="gender" id="dot-1">
-                <input type="radio" name="gender" id="dot-2">
-                <input type="radio" name="gender" id="dot-3">
-                <span class="gender-title">Gender</span>
-                <div class="category">
-                    <label for="dot-1">
-                        <span class="dot one"></span>
-                        <span class="gender">Male</span>
-                    </label>
-                    <label for="dot-2">
-                        <span class="dot two"></span>
-                        <span class="gender">Female</span>
-                    </label>
-                    <label for="dot-3">
-                        <span class="dot three"></span>
-                        <span class="gender">Prefer not to say</span>
-                    </label>
+                <!-- Confirm Password -->
+                <div class="w-full md:w-[calc(50%-0.5rem)]">
+                    <label class="block font-medium mb-1">Confirm Password</label>
+                    <input type="password" placeholder="Confirm your password" required
+                        class="w-full h-12 px-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
                 </div>
             </div>
-            <div class="button">
-                <input type="submit" value="Register">
+
+            <!-- Gender Details -->
+            <div class="mb-6">
+                <span class="font-medium block mb-2">Gender</span>
+                <div class="flex gap-4">
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="gender" class="hidden peer" id="dot-1">
+                        <span
+                            class="w-5 h-5 rounded-full border-4 border-transparent bg-gray-200 peer-checked:border-purple-500 peer-checked:bg-purple-500"></span>
+                        <span>Male</span>
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="gender" class="hidden peer" id="dot-2">
+                        <span
+                            class="w-5 h-5 rounded-full border-4 border-transparent bg-gray-200 peer-checked:border-purple-500 peer-checked:bg-purple-500"></span>
+                        <span>Female</span>
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="gender" class="hidden peer" id="dot-3">
+                        <span
+                            class="w-5 h-5 rounded-full border-4 border-transparent bg-gray-200 peer-checked:border-purple-500 peer-checked:bg-purple-500"></span>
+                        <span>Prefer not to say</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="h-12">
+                <button type="submit"
+                    class="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 text-white text-lg font-medium rounded-md hover:bg-gradient-to-bl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                    Register
+                </button>
             </div>
         </form>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js" ></script>
 </body>
 </html>
